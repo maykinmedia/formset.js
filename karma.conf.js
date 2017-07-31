@@ -38,8 +38,7 @@ module.exports = function(config) {
 
         coverageReporter: {
             reporters: [
-                { type: 'cobertura', dir: paths.coverageDir, subdir: '.', file: 'coverage.xml' },
-                { type: 'html', dir: paths.coverageDir, subdir: 'html' },
+                { type: 'lcov', dir: paths.coverageDir },
                 { type: 'text' }
             ]
         },
@@ -50,7 +49,7 @@ module.exports = function(config) {
             noInfo: true
         },
 
-        reporters: ['spec', 'coverage'],
+        reporters: (process.env.TRAVIS) ? ['spec', 'coverage', 'coveralls'] : ['spec', 'coverage'],
 
         browsers: ['Chrome', 'Firefox'],
     });
