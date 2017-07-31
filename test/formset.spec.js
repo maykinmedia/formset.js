@@ -1,4 +1,4 @@
-import Formset, { Formset as Formset2 } from '../src/bem.js';
+import Formset, { Formset as Formset2 } from '../src/formset.js';
 
 
 describe('module', function() {
