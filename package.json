@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "arrayify": "^1.0.0",
-    "bem.js": "^1.0.8",
+    "bem.js": "^1.0.8"
   },
   "devDependencies": {
     "babel-core": "^6.9.1",
