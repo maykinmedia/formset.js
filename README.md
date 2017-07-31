@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/maykinmedia/formset.js.svg?branch=1.0)](https://travis-ci.org/maykinmedia/formset.js)
-[![Coverage Status](https://coveralls.io/repos/github/maykinmedia/dual-listbox/badge.svg?branch=master)](https://coveralls.io/github/maykinmedia/formset.js?branch=master)
+[![Build Status](https://travis-ci.org/maykinmedia/formset.js.svg?branch=master)](https://travis-ci.org/maykinmedia/formset.js)
+[![Coverage Status](https://coveralls.io/repos/github/maykinmedia/formset.js/badge.svg?branch=master)](https://coveralls.io/github/maykinmedia/formset.js?branch=master)
 [![Lintly](https://lintly.com/gh/maykinmedia/formset.js/badge.svg)](https://lintly.com/gh/maykinmedia/formset.js/)
 [![Code Climate](https://codeclimate.com/github/maykinmedia/formset.js/badges/gpa.svg)](https://codeclimate.com/github/maykinmedia/formset.js/)
 [![npm](https://img.shields.io/npm/dw/formset.js.svg)](https://github.com/maykinmedia/formset.js)
