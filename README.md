@@ -3,6 +3,7 @@
 [![Lintly](https://lintly.com/gh/maykinmedia/formset.js/badge.svg)](https://lintly.com/gh/maykinmedia/formset.js/)
 [![Code Climate](https://codeclimate.com/github/maykinmedia/formset.js/badges/gpa.svg)](https://codeclimate.com/github/maykinmedia/formset.js/)
 [![npm](https://img.shields.io/npm/dw/formset.js.svg)](https://github.com/maykinmedia/formset.js)
+[![BCH compliance](https://bettercodehub.com/edge/badge/maykinmedia/formset.js?branch=master)](https://bettercodehub.com/)
 
 [![NPM](https://nodei.co/npm/formset.js.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/formset.js/)
 
