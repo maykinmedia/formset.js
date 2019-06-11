@@ -19,9 +19,56 @@ Install with [npm](https://www.npmjs.com/)
 $ npm i formset.js --save
 ```
 
-## Usage 
+## Usage
 
-TODO
+```html
+<!-- class="formset" is required to attach the javascript to the formset.  -->
+<form class="formset" action="." method="POST">
+    {% csrf_token %}
+
+    {{ formset.management_form }}
+
+    <!-- class="formset__body" is required to add the new forms in. -->
+    <div class="formset__body">
+        {% for form in formset.forms %}
+            <!-- class="formset__container" is used to define the bounds of a single form. (for deletion) -->
+            <div class="formset__container">
+                {{ form.first_name }}
+                {{ form.last_name }}
+                {{ form.email }}
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- class="formset__template" is required to show what the template is. -->
+    <template class="formset__template">
+        <!-- class="formset__container" is used to define the bounds of a single form. (for deletion) -->
+        <div class="formset__container">
+            {{ formset.empty_form.first_name }}
+            {{ formset.empty_form.last_name }}
+            {{ formset.empty_form.email }}
+        </div>
+    </template>
+
+    <!-- class="formset__add" is used to add a new form. -->
+    <a href="#" class="button formset__add" data-formset-prefix="{{ formset.prefix }}" >{% trans 'Add user' %}</a>
+    <!-- class="formset__add" is used to remove the last form in formset__body. -->
+    <a href="#" class="button formset__remove" data-formset-prefix="{{ formset.prefix }}" >{% trans 'Remove user' %}</a>
+</form>
+<script>
+    import Formset from 'formset.js';
+
+    new Formset();
+</script>
+```
+
+Required class names to make it work:
+- `formset`: Makes this part usable with formset.js. All the following class names should be inside this container element.
+- `formset__body`: Know where to append the new form (from the `formset_add` button)
+- `formset__container`: Boundaries of the form. Used for deleting a form.
+- `formset__template`: Where an empty template can be found.
+- `formset__add`: The button/element to add the new form.
+- `formset__remove`: The button/element to remove the last form from the `formset__body`
 
 ## Running tests
 
@@ -30,6 +77,10 @@ $ gulp build  // Make sure you test against the latest build
 $ gulp lint   // Check for linting errors
 $ gulp test   // Run the tests
 ```
+
+## TODO
+
+- Work with existing formsets. Handle proper deletion. (now only create views are supported.)
 
 ## Contributing
 
